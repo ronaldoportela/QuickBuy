@@ -45,6 +45,11 @@ namespace QuickBuy.Repositorio.Config
                 .Property(p => p.NumeroEndereco)
                 .IsRequired();
 
+            // o pedido possui apenas 1 único usuário (náo é necessário , pois já está configurado no usuário)
+            // builder.HasOne(p => p.Usuario);
+
+            builder
+                .HasOne(p => p.FormaPagamento);
 
 
         }
